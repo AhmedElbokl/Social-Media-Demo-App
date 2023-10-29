@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98329DE72AE710BC00C9E8AD /* UIImage+ConvertStringUrlToUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98329DE62AE710BC00C9E8AD /* UIImage+ConvertStringUrlToUIImage.swift */; };
+		985573992AE5998300E7064A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985573982AE5998300E7064A /* Comment.swift */; };
+		9855739B2AE59F5C00E7064A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9855739A2AE59F5C00E7064A /* CommentCell.swift */; };
+		985963A32AEC12430068281B /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985963A22AEC12430068281B /* RegisterVC.swift */; };
+		985963A52AEC49A40068281B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985963A42AEC49A40068281B /* SignInVC.swift */; };
+		988EC4F12AE3129800AC6D49 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988EC4F02AE3129800AC6D49 /* PostCell.swift */; };
+		988EC4F32AE334C700AC6D49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988EC4F22AE334C700AC6D49 /* User.swift */; };
+		988EC4F52AE43B5900AC6D49 /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988EC4F42AE43B5900AC6D49 /* PostDetailsVC.swift */; };
+		98D737F42AD1E1A100AF1822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D737F32AD1E1A100AF1822 /* AppDelegate.swift */; };
+		98D737F62AD1E1A100AF1822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D737F52AD1E1A100AF1822 /* SceneDelegate.swift */; };
+		98D737F82AD1E1A100AF1822 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D737F72AD1E1A100AF1822 /* PostsVC.swift */; };
+		98D737FB2AD1E1A100AF1822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D737F92AD1E1A100AF1822 /* Main.storyboard */; };
+		98D737FD2AD1E1B500AF1822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D737FC2AD1E1B500AF1822 /* Assets.xcassets */; };
+		98D738002AD1E1B500AF1822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98D737FE2AD1E1B500AF1822 /* LaunchScreen.storyboard */; };
+		98D7380B2AE1BE8400AF1822 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D7380A2AE1BE8400AF1822 /* Post.swift */; };
+		98E8FBA32AEAFCBF00A1663D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8FBA22AEAFCBF00A1663D /* ProfileVC.swift */; };
+		98E8FBA52AEB1A7800A1663D /* User Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8FBA42AEB1A7800A1663D /* User Location.swift */; };
+		98E8FBA82AEB23A800A1663D /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8FBA72AEB23A800A1663D /* PostAPI.swift */; };
+		98E8FBAA2AEB323C00A1663D /* UserDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8FBA92AEB323C00A1663D /* UserDataAPI.swift */; };
+		98E8FBAC2AEBBD0700A1663D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E8FBAB2AEBBD0700A1663D /* API.swift */; };
+		F734E9F0E41953FE15D0991A /* Pods_Social_Media_Demo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2539BC07FA0AECBE973041 /* Pods_Social_Media_Demo_App.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7534B53DD7BC4F45A9FB773E /* Pods-Social Media Demo App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media Demo App.debug.xcconfig"; path = "Target Support Files/Pods-Social Media Demo App/Pods-Social Media Demo App.debug.xcconfig"; sourceTree = "<group>"; };
+		7D2539BC07FA0AECBE973041 /* Pods_Social_Media_Demo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Social_Media_Demo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98329DE62AE710BC00C9E8AD /* UIImage+ConvertStringUrlToUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ConvertStringUrlToUIImage.swift"; sourceTree = "<group>"; };
+		985573982AE5998300E7064A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9855739A2AE59F5C00E7064A /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		985963A22AEC12430068281B /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		985963A42AEC49A40068281B /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		988EC4F02AE3129800AC6D49 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		988EC4F22AE334C700AC6D49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		988EC4F42AE43B5900AC6D49 /* PostDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
+		98D737F02AD1E1A100AF1822 /* Social Media Demo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Media Demo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98D737F32AD1E1A100AF1822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		98D737F52AD1E1A100AF1822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		98D737F72AD1E1A100AF1822 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
+		98D737FA2AD1E1A100AF1822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98D737FC2AD1E1B500AF1822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98D737FF2AD1E1B500AF1822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98D738012AD1E1B500AF1822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98D7380A2AE1BE8400AF1822 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		98E8FBA22AEAFCBF00A1663D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		98E8FBA42AEB1A7800A1663D /* User Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User Location.swift"; sourceTree = "<group>"; };
+		98E8FBA72AEB23A800A1663D /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
+		98E8FBA92AEB323C00A1663D /* UserDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataAPI.swift; sourceTree = "<group>"; };
+		98E8FBAB2AEBBD0700A1663D /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		EC89F90177F42C0089FBDFDC /* Pods-Social Media Demo App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Media Demo App.release.xcconfig"; path = "Target Support Files/Pods-Social Media Demo App/Pods-Social Media Demo App.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98D737ED2AD1E1A100AF1822 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F734E9F0E41953FE15D0991A /* Pods_Social_Media_Demo_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C038B8A15EAF5606DC4F99C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7534B53DD7BC4F45A9FB773E /* Pods-Social Media Demo App.debug.xcconfig */,
+				EC89F90177F42C0089FBDFDC /* Pods-Social Media Demo App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1E8154BD934C7337FD897977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D2539BC07FA0AECBE973041 /* Pods_Social_Media_Demo_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98329DE52AE7104400C9E8AD /* Supporting File  */ = {
+			isa = PBXGroup;
+			children = (
+				98329DE62AE710BC00C9E8AD /* UIImage+ConvertStringUrlToUIImage.swift */,
+			);
+			path = "Supporting File ";
+			sourceTree = "<group>";
+		};
+		98D737E72AD1E1A000AF1822 = {
+			isa = PBXGroup;
+			children = (
+				98D737F22AD1E1A100AF1822 /* Social Media Demo App */,
+				98D737F12AD1E1A100AF1822 /* Products */,
+				1C038B8A15EAF5606DC4F99C /* Pods */,
+				1E8154BD934C7337FD897977 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		98D737F12AD1E1A100AF1822 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98D737F02AD1E1A100AF1822 /* Social Media Demo App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98D737F22AD1E1A100AF1822 /* Social Media Demo App */ = {
+			isa = PBXGroup;
+			children = (
+				98D737F32AD1E1A100AF1822 /* AppDelegate.swift */,
+				98D737F52AD1E1A100AF1822 /* SceneDelegate.swift */,
+				98E8FBA62AEB237200A1663D /* Networking */,
+				98329DE52AE7104400C9E8AD /* Supporting File  */,
+				98D738092AE1BD1800AF1822 /* Models */,
+				98D738082AE1BD0800AF1822 /* Views */,
+				98D738072AE1BCEF00AF1822 /* Controllers */,
+				98D737FC2AD1E1B500AF1822 /* Assets.xcassets */,
+				98D737FE2AD1E1B500AF1822 /* LaunchScreen.storyboard */,
+				98D738012AD1E1B500AF1822 /* Info.plist */,
+			);
+			path = "Social Media Demo App";
+			sourceTree = "<group>";
+		};
+		98D738072AE1BCEF00AF1822 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				98D737F72AD1E1A100AF1822 /* PostsVC.swift */,
+				988EC4F42AE43B5900AC6D49 /* PostDetailsVC.swift */,
+				988EC4F02AE3129800AC6D49 /* PostCell.swift */,
+				9855739A2AE59F5C00E7064A /* CommentCell.swift */,
+				98E8FBA22AEAFCBF00A1663D /* ProfileVC.swift */,
+				985963A22AEC12430068281B /* RegisterVC.swift */,
+				985963A42AEC49A40068281B /* SignInVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		98D738082AE1BD0800AF1822 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98D737F92AD1E1A100AF1822 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98D738092AE1BD1800AF1822 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98D7380A2AE1BE8400AF1822 /* Post.swift */,
+				988EC4F22AE334C700AC6D49 /* User.swift */,
+				985573982AE5998300E7064A /* Comment.swift */,
+				98E8FBA42AEB1A7800A1663D /* User Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		98E8FBA62AEB237200A1663D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				98E8FBAB2AEBBD0700A1663D /* API.swift */,
+				98E8FBA72AEB23A800A1663D /* PostAPI.swift */,
+				98E8FBA92AEB323C00A1663D /* UserDataAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98D737EF2AD1E1A100AF1822 /* Social Media Demo App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98D738042AD1E1B500AF1822 /* Build configuration list for PBXNativeTarget "Social Media Demo App" */;
+			buildPhases = (
+				B71FFBC76CB9034D892E9B70 /* [CP] Check Pods Manifest.lock */,
+				98D737EC2AD1E1A100AF1822 /* Sources */,
+				98D737ED2AD1E1A100AF1822 /* Frameworks */,
+				98D737EE2AD1E1A100AF1822 /* Resources */,
+				49522FD62F8FF72C3B11BFD3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Social Media Demo App";
+			productName = "Social Media Demo App";
+			productReference = 98D737F02AD1E1A100AF1822 /* Social Media Demo App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98D737E82AD1E1A000AF1822 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					98D737EF2AD1E1A100AF1822 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 98D737EB2AD1E1A000AF1822 /* Build configuration list for PBXProject "Social Media Demo App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98D737E72AD1E1A000AF1822;
+			productRefGroup = 98D737F12AD1E1A100AF1822 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98D737EF2AD1E1A100AF1822 /* Social Media Demo App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98D737EE2AD1E1A100AF1822 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98D738002AD1E1B500AF1822 /* LaunchScreen.storyboard in Resources */,
+				98D737FD2AD1E1B500AF1822 /* Assets.xcassets in Resources */,
+				98D737FB2AD1E1A100AF1822 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49522FD62F8FF72C3B11BFD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Media Demo App/Pods-Social Media Demo App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Social Media Demo App/Pods-Social Media Demo App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Social Media Demo App/Pods-Social Media Demo App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B71FFBC76CB9034D892E9B70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Social Media Demo App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98D737EC2AD1E1A100AF1822 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E8FBA82AEB23A800A1663D /* PostAPI.swift in Sources */,
+				98D737F82AD1E1A100AF1822 /* PostsVC.swift in Sources */,
+				98D737F42AD1E1A100AF1822 /* AppDelegate.swift in Sources */,
+				988EC4F32AE334C700AC6D49 /* User.swift in Sources */,
+				985963A52AEC49A40068281B /* SignInVC.swift in Sources */,
+				98E8FBAC2AEBBD0700A1663D /* API.swift in Sources */,
+				985573992AE5998300E7064A /* Comment.swift in Sources */,
+				98D737F62AD1E1A100AF1822 /* SceneDelegate.swift in Sources */,
+				98329DE72AE710BC00C9E8AD /* UIImage+ConvertStringUrlToUIImage.swift in Sources */,
+				98E8FBA52AEB1A7800A1663D /* User Location.swift in Sources */,
+				985963A32AEC12430068281B /* RegisterVC.swift in Sources */,
+				9855739B2AE59F5C00E7064A /* CommentCell.swift in Sources */,
+				98D7380B2AE1BE8400AF1822 /* Post.swift in Sources */,
+				988EC4F12AE3129800AC6D49 /* PostCell.swift in Sources */,
+				98E8FBA32AEAFCBF00A1663D /* ProfileVC.swift in Sources */,
+				988EC4F52AE43B5900AC6D49 /* PostDetailsVC.swift in Sources */,
+				98E8FBAA2AEB323C00A1663D /* UserDataAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		98D737F92AD1E1A100AF1822 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98D737FA2AD1E1A100AF1822 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		98D737FE2AD1E1B500AF1822 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98D737FF2AD1E1B500AF1822 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		98D738022AD1E1B500AF1822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98D738032AD1E1B500AF1822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98D738052AD1E1B500AF1822 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7534B53DD7BC4F45A9FB773E /* Pods-Social Media Demo App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Social Media Demo App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IDEAEG.Social-Media-Demo-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		98D738062AD1E1B500AF1822 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC89F90177F42C0089FBDFDC /* Pods-Social Media Demo App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Social Media Demo App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.IDEAEG.Social-Media-Demo-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98D737EB2AD1E1A000AF1822 /* Build configuration list for PBXProject "Social Media Demo App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98D738022AD1E1B500AF1822 /* Debug */,
+				98D738032AD1E1B500AF1822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98D738042AD1E1B500AF1822 /* Build configuration list for PBXNativeTarget "Social Media Demo App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98D738052AD1E1B500AF1822 /* Debug */,
+				98D738062AD1E1B500AF1822 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98D737E82AD1E1A000AF1822 /* Project object */;
+}
