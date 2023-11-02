@@ -89,7 +89,7 @@ class UserDataAPI: API{
                         }else {
                             completionHandler(nil, "Wrong Sign In Data")
                         }
-
+                        
                         print(decodedData)
                     }catch let erorr {
                         print(erorr.localizedDescription)
@@ -98,6 +98,32 @@ class UserDataAPI: API{
                     print(error.localizedDescription)
                 }
             }
+    }
+    
+    func updateUserData(userId: String, firstName: String, lastName: String, phone: String, imageUrl: String, completionHandler: @escaping (User?, String?) -> ()){
+        let url = baseUrl + "/user/\(userId)"
+        let bodyPram = [
+            "firstName": firstName,
+            "lastName": lastName,
+            "phone": phone,
+            "picture": imageUrl
+        ]
+        AF.request(url, method: .put, parameters: bodyPram, encoder: JSONParameterEncoder.default, headers: headers).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                let jsonData = JSON(response.value)
+                let decoder = JSONDecoder()
+                do{
+                    let decodedData = try decoder.decode(User.self, from: jsonData.rawData())
+                    completionHandler(decodedData, nil)
+                }catch let error{
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
     }
 }
 

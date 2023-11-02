@@ -50,7 +50,11 @@ class ProfileVC: UIViewController {
 //                }
     }
     
-
+    @IBAction func closeProfileVCBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    
     func setupUI(){
         guard let user = user else {return}
         nameLabel.text = user.firstName + " " + user.lastName

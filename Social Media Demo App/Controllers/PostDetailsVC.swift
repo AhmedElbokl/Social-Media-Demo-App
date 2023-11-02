@@ -13,7 +13,11 @@ import NVActivityIndicatorView
 class PostDetailsVC: UIViewController {
     var post: Post!
     var commentArr: [Comment] = []
-        
+    
+    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var sendCommentBtn: UIButton!
+    
+    
     @IBOutlet weak var loaderView: NVActivityIndicatorView!
     @IBOutlet weak var backContainerView: UIView!{
         didSet{
@@ -31,76 +35,109 @@ class PostDetailsVC: UIViewController {
     @IBOutlet weak var likesNumLabel: UILabel!
     
     @IBOutlet weak var commentsTableView: UITableView!
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         commentsTableView.dataSource = self
         commentsTableView.delegate = self
         
+        // if no any logged in user no longer to guest to create comment
+        if UserManager.loggedInUser == nil {
+            commentTextField.isHidden = true
+            sendCommentBtn.isHidden = true
+        }
         //convert user image from url type to uiimage type
-//        let stringUrlUserImage = post.owner.picture
-//        if let urlImage = URL(string: stringUrlUserImage) {
-//            URLSession.shared.dataTask(with: urlImage) { (data, response, error) in
-//                guard let imageData = data else { return }
-//                DispatchQueue.main.async {
-//                    let image = UIImage(data: imageData)
-//                    self.userImageView.image = image
-//                    self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
-//                }
-//            }.resume()
-//        }
+        //        let stringUrlUserImage = post.owner.picture
+        //        if let urlImage = URL(string: stringUrlUserImage) {
+        //            URLSession.shared.dataTask(with: urlImage) { (data, response, error) in
+        //                guard let imageData = data else { return }
+        //                DispatchQueue.main.async {
+        //                    let image = UIImage(data: imageData)
+        //                    self.userImageView.image = image
+        //                    self.userImageView.layer.cornerRadius = self.userImageView.frame.height / 2
+        //                }
+        //            }.resume()
+        //        }
         self.userImageView.convertFromStringUrlToUIImage(stringUri: post.owner.picture ?? "")
         self.userImageView.makeCircularImage()
         userNameLable.text = post.owner.firstName + " " + post.owner.lastName
         postTextLabel.text = post.text
         //convert post image from url type to uiimage type
-//        let stringUrlPostImage = post.image
-//        if let urlImage = URL(string: stringUrlPostImage ) {
-//            URLSession.shared.dataTask(with: urlImage) { (data, response, error) in
-//                guard let imageData = data else { return }
-//                DispatchQueue.main.async {
-//                    let image = UIImage(data: imageData)
-//                    self.postImageView.image = image
-//                }
-//            }.resume()
-//        }
+        //        let stringUrlPostImage = post.image
+        //        if let urlImage = URL(string: stringUrlPostImage ) {
+        //            URLSession.shared.dataTask(with: urlImage) { (data, response, error) in
+        //                guard let imageData = data else { return }
+        //                DispatchQueue.main.async {
+        //                    let image = UIImage(data: imageData)
+        //                    self.postImageView.image = image
+        //                }
+        //            }.resume()
+        //        }
         self.postImageView.convertFromStringUrlToUIImage(stringUri: post.image)
         self.postImageView.layer.cornerRadius = 10
         
         likesNumLabel.text = String(post.likes)
         
-        // aminating loader and post comments request
+        // post comments request
+       getPostComment()
+        //request comments form server
+        //        let postId = post.id
+        //        let url = "https://dummyapi.io/data/v1/post/\(postId)/comment"
+        //        let appId = "6531535fe8ca784faf33486e"
+        //        let headers: HTTPHeaders = [
+        //            "app-id": appId
+        //        ]
+        //        loaderView.startAnimating()
+        //        AF.request(url, headers: headers).responseJSON { response in
+        //            self.loaderView.stopAnimating()
+        //            let jsonData = JSON(response.value)
+        //            let data = jsonData["data"]
+        //                let decoder = JSONDecoder()
+        //                do{
+        //                    let decodedData = try decoder.decode([Comment].self, from: data.rawData())
+        //                    print(decodedData)
+        //                    self.commentArr = decodedData
+        //                } catch let error{
+        //                    print(error.localizedDescription)
+        //                }
+        //            self.commentsTableView.reloadData()
+        //        }
+        
+    }
+
+    
+    @IBAction func closePostDetailsVCBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    func getPostComment(){
         loaderView.startAnimating()
         PostAPI.shared.requestPostComments(postId: post.id) { commentResponse in
             self.commentArr = commentResponse
             self.commentsTableView.reloadData()
             self.loaderView.stopAnimating()
         }
-        //request comments form server
-//        let postId = post.id
-//        let url = "https://dummyapi.io/data/v1/post/\(postId)/comment"
-//        let appId = "6531535fe8ca784faf33486e"
-//        let headers: HTTPHeaders = [
-//            "app-id": appId
-//        ]
-//        loaderView.startAnimating()
-//        AF.request(url, headers: headers).responseJSON { response in
-//            self.loaderView.stopAnimating()
-//            let jsonData = JSON(response.value)
-//            let data = jsonData["data"]
-//                let decoder = JSONDecoder()
-//                do{
-//                    let decodedData = try decoder.decode([Comment].self, from: data.rawData())
-//                    print(decodedData)
-//                    self.commentArr = decodedData
-//                } catch let error{
-//                    print(error.localizedDescription)
-//                }
-//            self.commentsTableView.reloadData()
-//        }
-   }
-}
+    }
+    
+    @IBAction func sendCommentBtnClicked(_ sender: Any) {
+        
+        if let user = UserManager.loggedInUser {
+            loaderView.startAnimating()
+            PostAPI.shared.addComment(commentMsg: commentTextField.text!, userId: user.id, postId: post.id) {
+                self.commentTextField.text = ""
+                self.getPostComment()
+                
+            }
+        }
+//        else {
+//            commentTextField.isHidden = true
+//            sendCommentBtn.isHidden = true
+//            }
+        }
+    }
+    
+
 
 extension PostDetailsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,9 +162,12 @@ extension PostDetailsVC: UITableViewDelegate, UITableViewDataSource {
 //                }
 //            }.resume()
 //        }
-        commentCell.commentUserImage.convertFromStringUrlToUIImage(stringUri: commentArr[indexPath.row].owner.picture ?? "")
-        commentCell.commentUserImage.makeCircularImage()
-
+        if let userImage = commentArr[indexPath.row].owner.picture {
+            commentCell.commentUserImage.convertFromStringUrlToUIImage(stringUri: userImage)
+            commentCell.commentUserImage.makeCircularImage()
+//            commentCell.commentUserImage.convertFromStringUrlToUIImage(stringUri: commentArr[indexPath.row].owner.picture ?? "")
+//            commentCell.commentUserImage.makeCircularImage()
+        }
         return commentCell
         
     }

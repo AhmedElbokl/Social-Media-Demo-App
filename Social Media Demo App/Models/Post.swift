@@ -14,5 +14,6 @@ struct Post: Codable {
     var likes: Int
     var text: String
     var owner: User
+    var tags: [String]?
 }
 

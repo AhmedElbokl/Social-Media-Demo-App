@@ -29,7 +29,10 @@ class RegisterVC: UIViewController {
                 
             }else{
                 let alert = UIAlertController(title: "Success", message: "Success to Create user", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default)
+                let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+// goto sign in
+                    self.goToSignIn()
+                }
                 alert.addAction(okAction)
                 self.present(alert, animated: true)
             }
@@ -37,6 +40,10 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func goToSignInVC(_ sender: Any) {
+       goToSignIn()
+    }
+    
+    func goToSignIn(){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let signInVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
         signInVC.modalPresentationStyle = .fullScreen
